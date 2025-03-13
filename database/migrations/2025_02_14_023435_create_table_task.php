@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('task_name');
             $table->date('deadline')->nullable();
             $table->string('description')->nullable();
-            $table->enum('priority', ['low', 'medium', 'high'])->default('low');
+            $table->enum('priority', ['Low', 'Medium', 'High'])->default('Low');
             $table->enum('status', ['pending', 'completed'])->default('pending');
             $table->timestamps();
         });
