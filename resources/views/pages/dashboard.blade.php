@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <a href="" class="text-decoration-none text-black">Dashboard</a>
+    <a class="text-decoration-none text-black">Dashboard</a>
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <div>
-                    <img src="{{ asset('assets/images/relax.png') }}" width="140" height="130" alt="">
+                    <img src="{{ asset('assets/images/todolist.png') }}" width="150" height="140" alt="">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                     <div class="d-flex align-items-center">
                         <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
                             style="width: 50px; height: 50px; background-color: #4CB9FF;">
-                            <i class="fas fa-water text-white" style="font-size: 22px;"></i>
+                            <i class="fas fa-clipboard-check text-white" style="font-size: 22px;"></i>
                         </div>
                         <div>
                             <h2 class="mb-0" style="font-size: 22px; font-weight: 500; color: #6C757D;">62</h2>
@@ -66,7 +66,7 @@
                     <div class="d-flex align-items-center">
                         <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
                             style="width: 50px; height: 50px; background-color: #4CB9FF;">
-                            <i class="fas fa-water text-white" style="font-size: 22px;"></i>
+                            <i class="fas fa-thumbtack text-white" style="font-size: 22px;"></i>
                         </div>
                         <div>
                             <h2 class="mb-0" style="font-size: 22px; font-weight: 500; color: #6C757D;">87</h2>
@@ -80,51 +80,57 @@
 
     <!-- Important Tasks Section -->
     <div class="mb-4">
-        <h5 class="fw-bold mb-3">Important Tasks</h5>
+        <h5 class="mb-3" style="font-weight: 400">Important Tasks</h5>
         <div class="card border-0 shadow">
             <div class="card-body p-4">
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table mb-5">
                         <thead>
-                            <tr style="color: #6C757D;">
-                                <th>No</th>
-                                <th>Tasks Name</th>
-                                <th>Date</th>
-                                <th>Description</th>
-                                <th>Priority</th>
-                                <th>Status</th>
+                            <tr>
+                                <th style="color: #5A607F; font-weight: 400; font-size: 14px;">No</th>
+                                <th style="color: #5A607F; font-weight: 400; font-size: 14px;">Tasks Name</th>
+                                <th style="color: #5A607F; font-weight: 400; font-size: 14px;">Date</th>
+                                <th style="color: #5A607F; font-weight: 400; font-size: 14px;">Description</th>
+                                <th style="color: #5A607F; font-weight: 400; font-size: 14px;">Priority</th>
+                                <th style="color: #5A607F; font-weight: 400; font-size: 14px;">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1.</td>
-                                <td>Coding</td>
-                                <td>May 5, 2025</td>
-                                <td>Coding is fun...</td>
-                                <td><span class="badge px-3 py-2"
-                                        style="background-color: #FF5757; color: white;">High</span></td>
-                                <td><span class="badge px-3 py-2"
-                                        style="background-color: #FDA12B; color: white;">Pending</span></td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">1.</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">Coding</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">May 5, 2025</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">Coding is fun...</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px"><span
+                                        class="badge badge-custom-2">High</span>
+                                </td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px"><span
+                                        class="badge badge-custom-3">Pending</span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>2.</td>
-                                <td>Coding</td>
-                                <td>May 5, 2025</td>
-                                <td>Coding is fun...</td>
-                                <td><span class="badge px-3 py-2"
-                                        style="background-color: #FF5757; color: white;">High</span></td>
-                                <td><span class="badge px-3 py-2"
-                                        style="background-color: #FDA12B; color: white;">Pending</span></td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">2.</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">Coding</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">May 5, 2025</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">Coding is fun...</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px"><span
+                                        class="badge badge-custom-2">High</span>
+                                </td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px"><span
+                                        class="badge badge-custom-3">Pending</span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>3.</td>
-                                <td>Coding</td>
-                                <td>May 5, 2025</td>
-                                <td>Coding is fun...</td>
-                                <td><span class="badge px-3 py-2"
-                                        style="background-color: #FF5757; color: white;">High</span></td>
-                                <td><span class="badge px-3 py-2"
-                                        style="background-color: #FDA12B; color: white;">Pending</span></td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">3.</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">Coding</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">May 5, 2025</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px">Coding is fun...</td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px"><span
+                                        class="badge badge-custom-2">High</span>
+                                </td>
+                                <td style="color: #131523; font-weight: 400; font-size: 14px"><span
+                                        class="badge badge-custom-3">Pending</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
