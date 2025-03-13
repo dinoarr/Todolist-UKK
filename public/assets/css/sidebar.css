@@ -60,9 +60,11 @@ body {
 .sidebar-header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
+    margin-left: 10px;
     margin-bottom: 2rem;
     font-weight: 600;
+    color: #062c4b;
 }
 
 .logo {
