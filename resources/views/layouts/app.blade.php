@@ -7,8 +7,9 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/icon.png') }}" type="image/x-icon" />
     <title>Todolist App</title>
 
-    {{-- Toastr CSS --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    {{-- SweetAlert CSS --}}
+    <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
 
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
@@ -38,31 +39,49 @@
 
     {{-- Bootstrap JS --}}
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/js/bootstrap.bundle.min.js') }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+    {{-- SweetAlert JS --}}
+    <script src="{{ asset('assets/sweetalert2/sweetalert2.all.min.js') }}"></script>
 
     <script>
-        // Toastr configuration
-        toastr.options = {
-            "closeButton": true,
-            "progressBar": true,
-            "positionClass": "toast-top-right",
-            "timeOut": "5000"
-        };
+        document.addEventListener("DOMContentLoaded", function() {
+            if ("{{ session('success') }}") {
+                Swal.fire({
+                    toast: true,
+                    position: "top-end",
+                    icon: "success",
+                    iconColor: "#ffffff",
+                    background: "#a5dc86",
+                    color: "#ffffff",
+                    title: "{{ session('success') }}",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    customClass: {
+                        popup: 'small-toast'
+                    }
+                });
+            }
 
-        // Display success message
-        @if (session('status'))
-            toastr.success("{{ session('status') }}");
-        @endif
-
-        // Display error message
-        @if (session('status_error'))
-            toastr.error("{{ session('status_error') }}");
-        @endif
+            if ("{{ session('error') }}") {
+                Swal.fire({
+                    toast: true,
+                    position: "top-end",
+                    icon: "error",
+                    iconColor: "#ffffff",
+                    background: "#f27474",
+                    color: "#ffffff",
+                    title: "{{ session('error') }}",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    customClass: {
+                        popup: 'small-toast'
+                    }
+                });
+            }
+        });
     </script>
-
-
 
     @stack('scripts')
 </body>
